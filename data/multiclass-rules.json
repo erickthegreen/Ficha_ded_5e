@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "descricao": "Regras iniciais de multiclasse usadas pela ficha modular. Esta fase cobre soma de níveis, bônus de proficiência por nível total, PV por dado médio e conjuração básica sem combinar espaços avançados.",
+  "nivelTotal": {
+    "regra": "Somar os níveis de todas as classes do personagem."
+  },
+  "bonusProficiencia": [
+    { "min": 1, "max": 4, "bonus": 2 },
+    { "min": 5, "max": 8, "bonus": 3 },
+    { "min": 9, "max": 12, "bonus": 4 },
+    { "min": 13, "max": 16, "bonus": 5 },
+    { "min": 17, "max": 20, "bonus": 6 }
+  ],
+  "pontosVida": {
+    "nivel1ClassePrincipal": "Valor máximo do dado de vida + modificador de Constituição.",
+    "niveisPosteriores": "Valor médio do dado de vida + modificador de Constituição.",
+    "medias": {
+      "d6": 4,
+      "d8": 5,
+      "d10": 6,
+      "d12": 7
+    },
+    "sobrescritaManual": true
+  },
+  "classeArmadura": {
+    "semArmadura": "10 + modificador de Destreza.",
+    "leve": "CA base + modificador de Destreza.",
+    "media": "CA base + modificador de Destreza limitado a +2.",
+    "pesada": "CA base sem modificador de Destreza.",
+    "escudo": "+2",
+    "sobrescritaManual": true
+  },
+  "conjuracao": {
+    "cd": "8 + bônus de proficiência + modificador do atributo de conjuração.",
+    "ataque": "bônus de proficiência + modificador do atributo de conjuração.",
+    "bruxo": "Magia de Pacto fica separada dos espaços comuns de multiclasse nesta fase."
+  },
+  "limitacoes": [
+    "Espaços de magia de multiclasse completa ainda não são calculados.",
+    "Requisitos mínimos de atributo para multiclasse ainda não bloqueiam escolhas.",
+    "Proficiências ganhas ao multiclassar ainda não são reduzidas pelas regras completas do Livro do Jogador."
+  ]
+}

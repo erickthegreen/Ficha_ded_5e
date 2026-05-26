@@ -1,0 +1,83 @@
+:root {
+  color-scheme: dark;
+  --theme-primary: #3f3a2e;
+  --theme-secondary: #11100d;
+  --theme-accent: #d5b24c;
+  --theme-overlay: rgba(9, 8, 6, 0.72);
+  --class-bg: none;
+  --bg: #0c0b09;
+  --surface: #171410;
+  --surface-strong: #211c15;
+  --surface-soft: #2a2319;
+  --border: #604721;
+  --border-soft: #3f321e;
+  --text: #f3ebda;
+  --muted: #b7aa91;
+  --danger: #f0a393;
+  --success: #a7d58c;
+  --shadow: rgba(0, 0, 0, 0.36);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+dd,
+dt,
+span {
+  overflow-wrap: anywhere;
+}

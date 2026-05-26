@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha — Ladino Espadachim</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="tema-trevas">
+
+<!-- ============================================================ BARRA DE TEMAS -->
+<div class="tema-bar">
+  <span class="tema-bar-label">Tema:</span>
+  <button class="tema-btn" onclick="setTema('trevas')" id="btn-trevas">
+    <span class="tema-dot" style="background:#c9a84c"></span>Trevas
+  </button>
+  <button class="tema-btn" onclick="setTema('pergaminho')" id="btn-pergaminho">
+    <span class="tema-dot" style="background:#8b5e2a"></span>Pergaminho
+  </button>
+  <button class="tema-btn" onclick="setTema('sangue')" id="btn-sangue">
+    <span class="tema-dot" style="background:#e05050"></span>Sangue
+  </button>
+  <button class="tema-btn" onclick="setTema('nevoa')" id="btn-nevoa">
+    <span class="tema-dot" style="background:#7ab4e8"></span>Névoa
+  </button>
+  <button class="tema-btn" onclick="setTema('floresta')" id="btn-floresta">
+    <span class="tema-dot" style="background:#78c878"></span>Floresta
+  </button>
+  <button class="tema-btn" onclick="setTema('areia')" id="btn-areia">
+    <span class="tema-dot" style="background:#e8c060"></span>Areia
+  </button>
+  <div class="save-group">
+    <button class="tema-btn" onclick="salvarFicha()">Salvar ficha</button>
+    <button class="tema-btn" onclick="exportarFicha()">Exportar</button>
+    <button class="tema-btn" onclick="abrirImportarFicha()">Importar</button>
+    <button class="tema-btn" onclick="exportarPDF()">Exportar PDF</button>
+    <input id="importar-ficha-input" type="file" accept="application/json,.json" style="display:none" onchange="importarFicha(event)">
+    <span class="save-status" id="save-status"></span>
+  </div>
+</div>
+
+<div class="pagina">
+
+  <!-- ============================================================ CABEÇALHO -->
+  <div class="cabecalho">
+    <div class="imagem-wrapper" id="imagem-wrapper">
+      <img class="imagem-preview" id="imagem-personagem" alt="Imagem do personagem">
+      <div class="imagem-placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Adicione a imagem<br>do personagem</span>
+      </div>
+      <div class="imagem-actions">
+        <button class="imagem-action-btn" onclick="escolherImagemPersonagem()">Imagem</button>
+        <button class="imagem-action-btn" onclick="removerImagemPersonagem()">Remover</button>
+      </div>
+      <input id="imagem-personagem-input" type="file" accept="image/*" style="display:none" onchange="carregarImagemPersonagem(event)">
+    </div>
+
+    <div class="info-principal">
+      <input class="nome-char" id="nome-char" type="text" value="Nome do Personagem" maxlength="40">
+      <div class="subtitulo-char" id="subtitulo-char">Humano Variante · Ladino · Nível 1</div>
+
+      <div class="badges">
+        <span class="badge badge-dourado" id="badge-pb">Proficiência +2</span>
+        <span class="badge badge-info" id="badge-sub">Espadachim (nv. 3)</span>
+        <span class="badge badge-cinza" id="badge-exp-txt">EXP: 0</span>
+      </div>
+
+      <!-- SELETOR DE NÍVEL -->
+      <div class="nivel-wrapper">
+        <span class="nivel-label">Nível</span>
+        <button class="nivel-btn" onclick="ajustarNivel(-1)">−</button>
+        <input class="nivel-input" id="nivel-input" type="number" value="1" min="1" max="20" oninput="onNivelInput()">
+        <button class="nivel-btn" onclick="ajustarNivel(+1)">+</button>
+        <span class="nivel-info" id="nivel-info">PB +2 | AF 1d6 | PV max 10</span>
+      </div>
+
+      <div class="info-row-grid">
+        <div class="info-campo">
+          <span class="info-label">Antecedente</span>
+          <input class="info-valor" id="antecedente-input" type="text" value="A definir">
+        </div>
+        <div class="info-campo">
+          <span class="info-label">Alinhamento</span>
+          <input class="info-valor" id="alinhamento-input" type="text" value="Neutro e Caótico">
+        </div>
+        <div class="info-campo">
+          <span class="info-label">Divindade</span>
+          <input class="info-valor" id="divindade-input" type="text" value="—">
+        </div>
+        <div class="info-campo">
+          <span class="info-label">Jogador</span>
+          <input class="info-valor" id="jogador-input" type="text" value="Erick">
+        </div>
+        <div class="info-campo">
+          <span class="info-label">Campanha</span>
+          <input class="info-valor" id="campanha-input" type="text" value="A definir">
+        </div>
+        <div class="info-campo">
+          <span class="info-label">Mestre</span>
+          <input class="info-valor" id="mestre-input" type="text" value="A definir">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ EXP -->
+  <div class="exp-bar-wrap">
+    <div class="exp-row">
+      <span class="exp-label">Experiência</span>
+      <input class="exp-input" id="exp-input" type="number" value="0" min="0" oninput="calcular()">
+      <span class="exp-meta" id="exp-meta">/ 300 XP para nível 2</span>
+    </div>
+    <div class="exp-pbar-wrap"><div class="exp-pbar" id="exp-pbar" style="width:0%"></div></div>
+  </div>
+
+  <div class="tabs-nav">
+    <button class="tab-btn" data-tab="resumo" onclick="trocarAba('resumo')">Resumo</button>
+    <button class="tab-btn" data-tab="combate" onclick="trocarAba('combate')">Combate</button>
+    <button class="tab-btn" data-tab="pericias" onclick="trocarAba('pericias')">Perícias</button>
+    <button class="tab-btn" data-tab="habilidades" onclick="trocarAba('habilidades')">Habilidades</button>
+    <button class="tab-btn" data-tab="inventario" onclick="trocarAba('inventario')">Inventário</button>
+    <button class="tab-btn" data-tab="personagem" onclick="trocarAba('personagem')">Personagem</button>
+    <button class="tab-btn" data-tab="anotacoes" onclick="trocarAba('anotacoes')">Anotações</button>
+  </div>
+
+  <!-- ============================================================ ATRIBUTOS -->
+  <div class="secao tab-section" data-tab="resumo">
+    <div class="secao-titulo">Atributos</div>
+    <div class="atributos-grid">
+      <div class="attr-box">
+        <span class="attr-nome">Força</span>
+        <input class="attr-input" type="number" id="s-for" value="10" min="1" max="30" oninput="calcular()">
+        <div class="attr-bonus-line">bônus <input class="attr-bonus-input" type="number" id="b-for" value="0" min="0" max="3" oninput="calcular()"></div>
+        <span class="attr-total" id="t-for">Total 10</span>
+        <span class="attr-mod mod-zer" id="m-for">+0</span>
+      </div>
+      <div class="attr-box">
+        <span class="attr-nome">Destreza</span>
+        <input class="attr-input" type="number" id="s-des" value="15" min="1" max="30" oninput="calcular()">
+        <div class="attr-bonus-line">bônus <input class="attr-bonus-input" type="number" id="b-des" value="1" min="0" max="3" oninput="calcular()"></div>
+        <span class="attr-total" id="t-des">Total 16</span>
+        <span class="attr-mod mod-pos" id="m-des">+3</span>
+      </div>
+      <div class="attr-box">
+        <span class="attr-nome">Constituição</span>
+        <input class="attr-input" type="number" id="s-con" value="14" min="1" max="30" oninput="calcular()">
+        <div class="attr-bonus-line">bônus <input class="attr-bonus-input" type="number" id="b-con" value="1" min="0" max="3" oninput="calcular()"></div>
+        <span class="attr-total" id="t-con">Total 15</span>
+        <span class="attr-mod mod-pos" id="m-con">+2</span>
+      </div>
+      <div class="attr-box">
+        <span class="attr-nome">Inteligência</span>
+        <input class="attr-input" type="number" id="s-int" value="12" min="1" max="30" oninput="calcular()">
+        <div class="attr-bonus-line">bônus <input class="attr-bonus-input" type="number" id="b-int" value="0" min="0" max="3" oninput="calcular()"></div>
+        <span class="attr-total" id="t-int">Total 12</span>
+        <span class="attr-mod mod-pos" id="m-int">+1</span>
+      </div>
+      <div class="attr-box">
+        <span class="attr-nome">Sabedoria</span>
+        <input class="attr-input" type="number" id="s-sab" value="10" min="1" max="30" oninput="calcular()">
+        <div class="attr-bonus-line">bônus <input class="attr-bonus-input" type="number" id="b-sab" value="0" min="0" max="3" oninput="calcular()"></div>
+        <span class="attr-total" id="t-sab">Total 10</span>
+        <span class="attr-mod mod-zer" id="m-sab">+0</span>
+      </div>
+      <div class="attr-box">
+        <span class="attr-nome">Carisma</span>
+        <input class="attr-input" type="number" id="s-car" value="14" min="1" max="30" oninput="calcular()">
+        <div class="attr-bonus-line">bônus <input class="attr-bonus-input" type="number" id="b-car" value="1" min="0" max="3" oninput="calcular()"></div>
+        <span class="attr-total" id="t-car">Total 15</span>
+        <span class="attr-mod mod-pos" id="m-car">+2</span>
+      </div>
+    </div>
+    <div class="nota-box bonus-racial-info">
+      <span>Use os campos de bônus para distribuir os 3 pontos raciais/homebrew que o mestre liberou. O atributo usado nos cálculos é o total.</span>
+      <span class="bonus-racial-restante" id="bonus-racial-restante">3 / 3 usados</span>
+    </div>
+  </div>
+
+  <!-- ============================================================ ESTATÍSTICAS -->
+  <div class="secao tab-section" data-tab="combate">
+    <div class="secao-titulo">Estatísticas Derivadas</div>
+    <!-- PV TRACKER -->
+    <div class="painel" style="margin-bottom:1rem;">
+      <div class="secao-titulo" style="border:none;margin-bottom:8px;padding:0;">Pontos de Vida</div>
+      <div class="pv-tracker">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <input class="pv-input" id="pv-atual-show" type="number" value="10" min="0" onchange="editarPVAtualManual()">
+          <div class="pv-atual-label">Atual</div>
+        </div>
+        <div class="pv-sep">/</div>
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <input class="pv-input pv-input-max" id="d-pv" type="number" value="10" min="1" onchange="editarPVMaxManual()">
+          <div class="pv-atual-label">Máximo</div>
+        </div>
+        <div class="pv-controls" style="margin-left:16px;">
+          <div class="pv-row">
+            <input class="pv-adj-input" id="pv-adj" type="number" value="1" min="1" placeholder="Qtd">
+            <button class="pv-btn pv-btn-dano"  onclick="ajustarPV(-1)">Dano</button>
+            <button class="pv-btn pv-btn-cura"  onclick="ajustarPV(+1)">Cura</button>
+            <button class="pv-btn pv-btn-reset" onclick="resetarPV()">Descanso</button>
+            <button class="pv-btn pv-btn-reset" onclick="limparPVMaxManual()">Auto</button>
+          </div>
+          <div class="pv-barra-wrap"><div class="pv-barra" id="pv-barra" style="width:100%;background:var(--cor-sucesso);"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-principal">
+      <div class="stat-card"><span class="stat-label">Classe de Armadura</span><input class="stat-input" id="d-ca" type="number" value="13" min="0" onchange="editarCAManual()"><span class="stat-sub" id="ca-sub">Couro: 11 + DES</span><button class="edit-btn" onclick="limparCAManual()">Auto</button></div>
+      <div class="stat-card"><span class="stat-label">Iniciativa</span><span class="stat-valor" id="d-init">—</span><span class="stat-sub" id="init-sub">DES + Alerta</span></div>
+      <div class="stat-card"><span class="stat-label">Deslocamento</span><input class="stat-input" id="d-speed" type="text" value="9m"><span class="stat-sub">30ft — humano</span></div>
+      <div class="stat-card"><span class="stat-label">Dado de Vida</span><span class="stat-valor" id="d-dv">1d8</span><span class="stat-sub">Ladino (d8)</span></div>
+      <div class="stat-card"><span class="stat-label">Bônus de Proficiência</span><span class="stat-valor" id="d-pb">+2</span><span class="stat-sub" id="pb-sub">Nível 1–4</span></div>
+      <div class="stat-card"><span class="stat-label">Percepção Passiva</span><span class="stat-valor" id="d-perc">—</span><span class="stat-sub">10 + SAB + Prof</span></div>
+    </div>
+  </div>
+
+  <!-- ============================================================ RESISTÊNCIAS + PERÍCIAS -->
+  <div class="grid-dois tab-section" data-tab="pericias">
+    <div class="secao">
+      <div class="secao-titulo">Testes de Resistência</div>
+      <div class="painel">
+        <div class="resist-row"><span class="resist-nome"><span class="dot-prof"></span>Força</span><span class="resist-val val-none" id="st-for">—</span></div>
+        <div class="resist-row"><span class="resist-nome"><span class="dot-prof ativo"></span>Destreza ✦</span><span class="resist-val val-prof" id="st-des">—</span></div>
+        <div class="resist-row"><span class="resist-nome"><span class="dot-prof"></span>Constituição</span><span class="resist-val val-none" id="st-con">—</span></div>
+        <div class="resist-row"><span class="resist-nome"><span class="dot-prof ativo"></span>Inteligência ✦</span><span class="resist-val val-prof" id="st-int">—</span></div>
+        <div class="resist-row"><span class="resist-nome"><span class="dot-prof"></span>Sabedoria</span><span class="resist-val val-none" id="st-sab">—</span></div>
+        <div class="resist-row"><span class="resist-nome"><span class="dot-prof"></span>Carisma</span><span class="resist-val val-none" id="st-car">—</span></div>
+      </div>
+    </div>
+
+    <div class="secao">
+      <div class="secao-titulo">Perícias</div>
+      <div class="painel">
+        <div id="skills-container"></div>
+        <div class="pericia-row" style="border:none;padding-top:8px;font-size:11px;color:var(--cor-texto-sec);grid-template-columns:1fr;">
+          <span>Especialista = proficiência dobrada. Extra serve para bônus temporário, item mágico ou regra da mesa.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ ATAQUES -->
+  <div class="secao tab-section" data-tab="combate">
+    <div class="secao-titulo">Ataques</div>
+    <div class="painel">
+      <div class="ataque-header">
+        <span>Arma</span><span style="text-align:center">Acerto</span><span style="text-align:right">Dano</span>
+      </div>
+      <div class="ataque-row">
+        <span class="ataque-nome">Rapieira</span>
+        <span class="ataque-hit" id="att-rap">—</span>
+        <span class="ataque-dano" id="dmg-rap">—</span>
+      </div>
+      <div class="ataque-row">
+        <span class="ataque-nome">Adaga (corpo-a-corpo)</span>
+        <span class="ataque-hit" id="att-adag">—</span>
+        <span class="ataque-dano" id="dmg-adag">—</span>
+      </div>
+      <div class="ataque-row">
+        <span class="ataque-nome">Adaga (arremesso 6/18m)</span>
+        <span class="ataque-hit" id="att-arr">—</span>
+        <span class="ataque-dano" id="dmg-arr">—</span>
+      </div>
+      <div class="ataque-row">
+        <span class="ataque-nome">Besta de Mão (30/120m)</span>
+        <span class="ataque-hit" id="att-besta">—</span>
+        <span class="ataque-dano" id="dmg-besta">—</span>
+      </div>
+      <div class="af-banner">
+        <div class="af-dice" id="af-dice">1d6</div>
+        <div class="af-desc">
+          <strong style="color:var(--cor-perigo)">Ataque Furtivo</strong> — 1× por turno.
+          Ativa com vantagem, ou aliado adjacente + sem desvantagem.
+          <span id="af-espadachim" style="display:none;color:var(--cor-dourado)">
+            · Espadachim: funciona se for o único inimigo a 1,5m de você.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divisor">✦ ✦ ✦</div>
+
+  <!-- ============================================================ HABILIDADES -->
+  <div class="secao tab-section" data-tab="habilidades">
+    <div class="secao-titulo">Habilidades de Classe &amp; Subclasse</div>
+    <div class="features-grid" id="features-container"></div>
+  </div>
+
+  <div class="divisor">✦ ✦ ✦</div>
+
+  <!-- ============================================================ TALENTOS -->
+  <div class="secao tab-section" data-tab="habilidades">
+    <div class="secao-titulo">Talentos</div>
+    <div class="painel">
+      <div id="talentos-container"></div>
+      <div class="edit-actions">
+        <button class="edit-btn" onclick="adicionarTalento()">Adicionar talento</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divisor">✦ ✦ ✦</div>
+
+  <!-- ============================================================ EQUIPAMENTO -->
+  <div class="secao tab-section" data-tab="inventario">
+    <div class="secao-titulo">Equipamento</div>
+    <div class="painel">
+      <div class="moedas-grid">
+        <div class="moeda-box"><span class="moeda-label">Ouro (PO)</span><input class="moeda-input" id="moeda-ouro" type="number" value="0" min="0"></div>
+        <div class="moeda-box"><span class="moeda-label">Prata (PP)</span><input class="moeda-input" id="moeda-prata" type="number" value="0" min="0"></div>
+        <div class="moeda-box"><span class="moeda-label">Cobre/Bronze (PC)</span><input class="moeda-input" id="moeda-cobre" type="number" value="0" min="0"></div>
+      </div>
+      <div class="inventario-grid" id="equipamentos-container"></div>
+      <div class="edit-actions">
+        <button class="edit-btn" onclick="adicionarEquipamento()">Adicionar item</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ TRAÇOS -->
+  <div class="secao tab-section" data-tab="personagem">
+    <div class="secao-titulo">Traços de Personalidade</div>
+    <div class="grid-dois">
+      <div>
+        <div class="trait-box"><div class="trait-titulo">Antecedente: perícias, ferramentas e benefício</div><textarea class="trait-texto" id="antecedente-notas" rows="3">Escreva aqui o que seu antecedente concede.</textarea></div>
+        <div class="trait-box"><div class="trait-titulo">Personalidade</div><textarea class="trait-texto" id="personalidade-texto" rows="2">Tenho estilo em tudo que faço. Até quando fujo, faço com elegância.</textarea></div>
+        <div class="trait-box"><div class="trait-titulo">Ideal</div><textarea class="trait-texto" id="ideal-texto" rows="2">Liberdade — ninguém me dá ordens. Eu escolho meus próprios contratos.</textarea></div>
+      </div>
+      <div>
+        <div class="trait-box"><div class="trait-titulo">Vínculo</div><textarea class="trait-texto" id="vinculo-texto" rows="2">A definir em mesa.</textarea></div>
+        <div class="trait-box"><div class="trait-titulo">Fraqueza</div><textarea class="trait-texto" id="fraqueza-texto" rows="2">Não resisto a um desafio de honra. Me provocam e eu aceito, mesmo quando não deveria.</textarea></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ ANOTAÇÕES -->
+  <div class="secao tab-section" data-tab="anotacoes">
+    <div class="secao-titulo">Anotações</div>
+    <div class="grid-dois">
+      <div>
+        <div class="trait-box"><div class="trait-titulo">Notas da sessão</div><textarea class="trait-texto" id="notas-sessao" rows="10" placeholder="Resumo da sessão, decisões do mestre, NPCs, pistas, dívidas, favores..."></textarea></div>
+        <div class="trait-box"><div class="trait-titulo">Objetivos</div><textarea class="trait-texto" id="notas-objetivos" rows="6" placeholder="Objetivos pessoais, missão atual, promessas, contratos..."></textarea></div>
+      </div>
+      <div>
+        <div class="trait-box"><div class="trait-titulo">Regras da mesa</div><textarea class="trait-texto" id="notas-regras" rows="6" placeholder="Regras homebrew, bônus temporários, condições especiais..."></textarea></div>
+        <div class="trait-box"><div class="trait-titulo">Tesouros e pendências</div><textarea class="trait-texto" id="notas-tesouros" rows="10" placeholder="Itens a identificar, recompensas, mapas, pistas, compras futuras..."></textarea></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rodape" id="rodape-txt">
+    D&amp;D 5e · Ladino Espadachim · Humano Variante · Nível 1 — Todos os campos são editáveis
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

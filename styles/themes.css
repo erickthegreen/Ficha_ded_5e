@@ -1,0 +1,31 @@
+body {
+  accent-color: var(--theme-accent);
+}
+
+body[data-theme-class="padrao"] .page-backdrop::before {
+  opacity: 0;
+}
+
+body[data-theme-class="ladino"] {
+  --border: #6f5529;
+}
+
+body[data-theme-class="mago"],
+body[data-theme-class="bruxo"] {
+  --border: #56658f;
+}
+
+body[data-theme-class="druida"],
+body[data-theme-class="ranger"] {
+  --border: #4f6934;
+}
+
+body[data-theme-class="clerigo"],
+body[data-theme-class="paladino"] {
+  --border: #7a632a;
+}
+
+body[data-theme-class="barbaro"],
+body[data-theme-class="guerreiro"] {
+  --border: #72503b;
+}

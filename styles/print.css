@@ -1,0 +1,19 @@
+@media print {
+  .page-backdrop,
+  .tabs,
+  .header-actions,
+  .toast-region {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  .panel,
+  .sheet-header,
+  .quick-panel {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,55 @@
+COMO COMPARTILHAR A FICHA D&D 5E MODULAR
+
+OPCAO 1 - Enviar para amigos por ZIP
+
+1. Compacte a pasta inteira do projeto em .zip.
+2. Envie o .zip para a pessoa.
+3. A pessoa extrai a pasta.
+4. No Windows, ela abre o arquivo:
+
+   abrir_ficha.bat
+
+5. O navegador abre em:
+
+   http://127.0.0.1:8000/
+
+Observacao:
+Esse modo precisa que o computador tenha Python 3 instalado.
+
+
+OPCAO 2 - Colocar online
+
+Se voce quer que a galera so clique em um link, publique a pasta em um servico de site estatico, como:
+
+- GitHub Pages
+- Netlify
+- Vercel
+
+Depois voce envia o link para todo mundo.
+
+Cada pessoa vai editar e salvar no proprio navegador dela.
+
+
+COMO ENVIAR UMA FICHA/PERSONAGEM ESPECIFICO
+
+Na aba Exportacao:
+
+1. Clique em Exportar JSON.
+2. Envie o arquivo .json para a pessoa.
+3. A pessoa abre a ficha no PC dela.
+4. Vai em Exportacao.
+5. Clica em Importar JSON.
+
+
+IMPORTANTE
+
+O salvamento atual usa localStorage.
+
+Isso significa:
+
+- cada navegador tem o proprio salvamento;
+- guia anonima nao compartilha o salvamento;
+- outro computador nao ve automaticamente sua ficha salva;
+- para transferir personagem, use Exportar JSON e Importar JSON.
+
+Se voce quiser que varias pessoas editem a mesma ficha online ao mesmo tempo, sera necessario criar uma versao com login e banco de dados.

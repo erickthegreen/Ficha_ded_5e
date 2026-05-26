@@ -1,0 +1,24 @@
+# Arquivos-fonte grandes ou temporarios que nao precisam ir para o GitHub Pages
+*.pdf
+*.tmp
+*.log
+
+# Fontes brutas usadas durante a construcao dos JSONs
+todos os itens.txt
+armas.txt
+armaduras.txt
+bens e servicos.txt
+bugigangas.txt
+frascos e consumiveis.txt
+itens diversos.txt
+kits e ferramentas.txt
+montarias e veiculos.txt
+dnd5e_classes_pdf_extraido_raw.json
+dnd5e_classes_pdf_normalizado.json
+racas.json
+
+# Duplicatas antigas preservadas localmente; a versao publicada usa legacy/
+ficha_ladino_espadachim_v3.html
+ficha_ladino_espadachim_v3.css
+ficha_ladino_espadachim_v3.js
+fundos das classes/
