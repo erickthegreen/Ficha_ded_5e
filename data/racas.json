@@ -1,0 +1,2083 @@
+[
+  {
+    "id": "aasimar",
+    "nome": "Aasimar",
+    "descricao": "Descendentes de criaturas celestiais, Aasimares parecem humanos gloriosos e heroicos. Costumam tentar disfarçar sua linhagem para enfrentar o mal sem chamar atenção.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "CAR": 2
+    },
+    "idiomas": [
+      "Celestial",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Mãos que Curam",
+        "descricao": "Uma vez por dia com uma ação cura alvo tocado PA igual ao seu nível."
+      },
+      {
+        "nome": "Portador da Luz",
+        "descricao": "Conhece o Truque Luz."
+      },
+      {
+        "nome": "Resistência Celestial",
+        "descricao": "Resistência a dano Necrótico e Radiante."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata luz baixa como luz normal e escuridão como luz baixa, ambos a até 18m."
+      }
+    ],
+    "subRacas": [
+      {
+        "nome": "Caído",
+        "atributos": {
+          "FOR": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Consumo Radiante",
+            "descricao": "A partir do nível 3, uma vez por dia pode libertar energia celestial por 1 minuto. Criaturas a até 3m devem passar em resistência de CAR ou ficarem Assustadas. Uma vez por turno causa +nível dano necrótico em um ataque ou magia."
+          }
+        ]
+      },
+      {
+        "nome": "Flagelo",
+        "atributos": {
+          "CON": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Consumo Radiante",
+            "descricao": "A partir do nível 3, uma vez por dia pode libertar energia celestial por 1 minuto. Emana luz brilhante a 3m. Ao final do turno você e criaturas a até 3m sofrem ½ nível como dano radiante. Uma vez por turno causa +nível dano radiante em um ataque ou magia."
+          }
+        ]
+      },
+      {
+        "nome": "Protetor",
+        "atributos": {
+          "SAB": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Alma Radiante",
+            "descricao": "A partir do nível 3, uma vez por dia pode libertar energia celestial por 1 minuto. Durante o efeito recebe deslocamento de vôo 9m. Uma vez por turno causa +nível dano radiante em um ataque ou magia."
+          }
+        ]
+      }
+    ],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Aasimar",
+      "descricao": "Descendentes de criaturas celestiais, Aasimares parecem humanos gloriosos e heroicos. Costumam tentar disfarçar sua linhagem para enfrentar o mal sem chamar atenção.",
+      "atributos": {
+        "CAR": 2
+      },
+      "tendencia_comum": "Normalmente Boa, mas alguns rejeitam sua linhagem e caem para o mal",
+      "idade": {
+        "descricao": "Como Humanos, mas vivem um pouco mais"
+      },
+      "tamanho": "Médio",
+      "idiomas": [
+        "Celestial",
+        "Comum"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Mãos que Curam",
+          "descricao": "Uma vez por dia com uma ação cura alvo tocado PA igual ao seu nível."
+        },
+        {
+          "nome": "Portador da Luz",
+          "descricao": "Conhece o Truque Luz."
+        },
+        {
+          "nome": "Resistência Celestial",
+          "descricao": "Resistência a dano Necrótico e Radiante."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata luz baixa como luz normal e escuridão como luz baixa, ambos a até 18m."
+        }
+      ],
+      "sub_racas": [
+        {
+          "nome": "Caído",
+          "atributos": {
+            "FOR": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Consumo Radiante",
+              "descricao": "A partir do nível 3, uma vez por dia pode libertar energia celestial por 1 minuto. Criaturas a até 3m devem passar em resistência de CAR ou ficarem Assustadas. Uma vez por turno causa +nível dano necrótico em um ataque ou magia."
+            }
+          ]
+        },
+        {
+          "nome": "Flagelo",
+          "atributos": {
+            "CON": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Consumo Radiante",
+              "descricao": "A partir do nível 3, uma vez por dia pode libertar energia celestial por 1 minuto. Emana luz brilhante a 3m. Ao final do turno você e criaturas a até 3m sofrem ½ nível como dano radiante. Uma vez por turno causa +nível dano radiante em um ataque ou magia."
+            }
+          ]
+        },
+        {
+          "nome": "Protetor",
+          "atributos": {
+            "SAB": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Alma Radiante",
+              "descricao": "A partir do nível 3, uma vez por dia pode libertar energia celestial por 1 minuto. Durante o efeito recebe deslocamento de vôo 9m. Uma vez por turno causa +nível dano radiante em um ataque ou magia."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "anao",
+    "nome": "Anão",
+    "descricao": "Povo das montanhas, dedicados a clã e tradição, com ódio por orcs e goblins.",
+    "deslocamento": 7.5,
+    "bonusAtributos": {
+      "CON": 2
+    },
+    "idiomas": [
+      "Anão",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Ferramentas",
+        "descricao": "Proficiência em Ferreiro, Maçom ou Cervejeiro (escolha uma)."
+      },
+      {
+        "nome": "Lento e Firme",
+        "descricao": "Deslocamento não é reduzido por armadura."
+      },
+      {
+        "nome": "Ligação com Pedra",
+        "descricao": "Dobro de proficiência em História relacionada à origem de trabalhos de pedra."
+      },
+      {
+        "nome": "Resiliência",
+        "descricao": "Resistência a dano de veneno e Vantagem contra veneno."
+      },
+      {
+        "nome": "Treino em Combate Anão",
+        "descricao": "Proficiência com machado de guerra, machadinha, martelo de arremesso e martelo de guerra."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata escuridão a 18m como luz baixa, e luz baixa como brilhante."
+      }
+    ],
+    "subRacas": [
+      {
+        "nome": "Anão da Colina",
+        "atributos": {
+          "SAB": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Firmeza Anã",
+            "descricao": "+1 PA por nível."
+          }
+        ]
+      },
+      {
+        "nome": "Anão da Montanha",
+        "atributos": {
+          "FOR": 2
+        },
+        "habilidades": [
+          {
+            "nome": "Proficiência",
+            "descricao": "Armaduras leves e médias."
+          }
+        ]
+      },
+      {
+        "nome": "Anão das Profundezas (Duergar)",
+        "atributos": {
+          "FOR": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Visão no Escuro Superior",
+            "descricao": "Visão no Escuro 36m."
+          },
+          {
+            "nome": "Resiliência Profunda",
+            "descricao": "Vantagem contra ilusão, ser enfeitiçado ou paralisado."
+          },
+          {
+            "nome": "Idioma Extra",
+            "descricao": "Subterrâneo."
+          },
+          {
+            "nome": "Magia Profunda",
+            "descricao": "Nível 3: Aumentar/Reduzir em si mesmo. Nível 5: Invisibilidade em si mesmo. Baseadas em INT. Não funciona à luz solar."
+          },
+          {
+            "nome": "Sensibilidade à Luz",
+            "descricao": "Desvantagem em ataque e Percepção sob luz solar direta."
+          }
+        ]
+      }
+    ],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Anão",
+      "descricao": "Povo das montanhas, dedicados a clã e tradição, com ódio por orcs e goblins.",
+      "atributos": {
+        "CON": 2
+      },
+      "tendencia_comum": "Bom Leal",
+      "idade": {
+        "adulto_aos": 50,
+        "expectativa_de_vida": 350
+      },
+      "tamanho": "Médio",
+      "altura_m": "1,20 a 1,50",
+      "peso_kg": 75,
+      "idiomas": [
+        "Anão",
+        "Comum"
+      ],
+      "deslocamento_m": 7.5,
+      "habilidades": [
+        {
+          "nome": "Ferramentas",
+          "descricao": "Proficiência em Ferreiro, Maçom ou Cervejeiro (escolha uma)."
+        },
+        {
+          "nome": "Lento e Firme",
+          "descricao": "Deslocamento não é reduzido por armadura."
+        },
+        {
+          "nome": "Ligação com Pedra",
+          "descricao": "Dobro de proficiência em História relacionada à origem de trabalhos de pedra."
+        },
+        {
+          "nome": "Resiliência",
+          "descricao": "Resistência a dano de veneno e Vantagem contra veneno."
+        },
+        {
+          "nome": "Treino em Combate Anão",
+          "descricao": "Proficiência com machado de guerra, machadinha, martelo de arremesso e martelo de guerra."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata escuridão a 18m como luz baixa, e luz baixa como brilhante."
+        }
+      ],
+      "sub_racas": [
+        {
+          "nome": "Anão da Colina",
+          "atributos": {
+            "SAB": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Firmeza Anã",
+              "descricao": "+1 PA por nível."
+            }
+          ]
+        },
+        {
+          "nome": "Anão da Montanha",
+          "atributos": {
+            "FOR": 2
+          },
+          "habilidades": [
+            {
+              "nome": "Proficiência",
+              "descricao": "Armaduras leves e médias."
+            }
+          ]
+        },
+        {
+          "nome": "Anão das Profundezas (Duergar)",
+          "atributos": {
+            "FOR": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Visão no Escuro Superior",
+              "descricao": "Visão no Escuro 36m."
+            },
+            {
+              "nome": "Resiliência Profunda",
+              "descricao": "Vantagem contra ilusão, ser enfeitiçado ou paralisado."
+            },
+            {
+              "nome": "Idioma Extra",
+              "descricao": "Subterrâneo."
+            },
+            {
+              "nome": "Magia Profunda",
+              "descricao": "Nível 3: Aumentar/Reduzir em si mesmo. Nível 5: Invisibilidade em si mesmo. Baseadas em INT. Não funciona à luz solar."
+            },
+            {
+              "nome": "Sensibilidade à Luz",
+              "descricao": "Desvantagem em ataque e Percepção sob luz solar direta."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "draconato",
+    "nome": "Draconato",
+    "descricao": "Nascidos de dragões, andam orgulhosamente num mundo que os recebe com medo e incompreensão.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "FOR": 2,
+      "CAR": 1
+    },
+    "idiomas": [
+      "Dracônico",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Ancestralidade Dracônica",
+        "descricao": "Escolha um ancestral. Suas escamas, resistência e sopro seguem o elemento:",
+        "opcoes": [
+          {
+            "cor": "Azul",
+            "elemento": "Eletricidade",
+            "forma": "Linha 1,5m x 6m",
+            "save": "DES"
+          },
+          {
+            "cor": "Branco",
+            "elemento": "Frio",
+            "forma": "Cone 4,5m",
+            "save": "CON"
+          },
+          {
+            "cor": "Bronze",
+            "elemento": "Eletricidade",
+            "forma": "Linha 1,5m x 6m",
+            "save": "DES"
+          },
+          {
+            "cor": "Cobre",
+            "elemento": "Ácido",
+            "forma": "Linha 1,5m x 6m",
+            "save": "DES"
+          },
+          {
+            "cor": "Latão",
+            "elemento": "Fogo",
+            "forma": "Linha 1,5m x 6m",
+            "save": "DES"
+          },
+          {
+            "cor": "Ouro",
+            "elemento": "Fogo",
+            "forma": "Cone 4,5m",
+            "save": "DES"
+          },
+          {
+            "cor": "Prata",
+            "elemento": "Frio",
+            "forma": "Cone 4,5m",
+            "save": "CON"
+          },
+          {
+            "cor": "Preto",
+            "elemento": "Ácido",
+            "forma": "Linha 1,5m x 6m",
+            "save": "DES"
+          },
+          {
+            "cor": "Verde",
+            "elemento": "Veneno",
+            "forma": "Cone 4,5m",
+            "save": "CON"
+          },
+          {
+            "cor": "Vermelho",
+            "elemento": "Fogo",
+            "forma": "Cone 4,5m",
+            "save": "DES"
+          }
+        ]
+      },
+      {
+        "nome": "Resistência",
+        "descricao": "Resistência ao elemento do ancestral escolhido."
+      },
+      {
+        "nome": "Sopro",
+        "descricao": "Uma vez por descanso causa 2d6 (CD 8 + Proficiência + CON, resistência DES para metade). Aumenta 1d6 aos níveis 6, 11 e 16."
+      }
+    ],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Draconato",
+      "descricao": "Nascidos de dragões, andam orgulhosamente num mundo que os recebe com medo e incompreensão.",
+      "atributos": {
+        "FOR": 2,
+        "CAR": 1
+      },
+      "tendencia_comum": "Bom Leal ou Caótico Mau",
+      "idade": {
+        "adulto_aos": 15,
+        "expectativa_de_vida": 80
+      },
+      "tamanho": "Médio",
+      "altura_m": "mais de 1,80",
+      "peso_kg": 125,
+      "idiomas": [
+        "Dracônico",
+        "Comum"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Ancestralidade Dracônica",
+          "descricao": "Escolha um ancestral. Suas escamas, resistência e sopro seguem o elemento:",
+          "opcoes": [
+            {
+              "cor": "Azul",
+              "elemento": "Eletricidade",
+              "forma": "Linha 1,5m x 6m",
+              "save": "DES"
+            },
+            {
+              "cor": "Branco",
+              "elemento": "Frio",
+              "forma": "Cone 4,5m",
+              "save": "CON"
+            },
+            {
+              "cor": "Bronze",
+              "elemento": "Eletricidade",
+              "forma": "Linha 1,5m x 6m",
+              "save": "DES"
+            },
+            {
+              "cor": "Cobre",
+              "elemento": "Ácido",
+              "forma": "Linha 1,5m x 6m",
+              "save": "DES"
+            },
+            {
+              "cor": "Latão",
+              "elemento": "Fogo",
+              "forma": "Linha 1,5m x 6m",
+              "save": "DES"
+            },
+            {
+              "cor": "Ouro",
+              "elemento": "Fogo",
+              "forma": "Cone 4,5m",
+              "save": "DES"
+            },
+            {
+              "cor": "Prata",
+              "elemento": "Frio",
+              "forma": "Cone 4,5m",
+              "save": "CON"
+            },
+            {
+              "cor": "Preto",
+              "elemento": "Ácido",
+              "forma": "Linha 1,5m x 6m",
+              "save": "DES"
+            },
+            {
+              "cor": "Verde",
+              "elemento": "Veneno",
+              "forma": "Cone 4,5m",
+              "save": "CON"
+            },
+            {
+              "cor": "Vermelho",
+              "elemento": "Fogo",
+              "forma": "Cone 4,5m",
+              "save": "DES"
+            }
+          ]
+        },
+        {
+          "nome": "Resistência",
+          "descricao": "Resistência ao elemento do ancestral escolhido."
+        },
+        {
+          "nome": "Sopro",
+          "descricao": "Uma vez por descanso causa 2d6 (CD 8 + Proficiência + CON, resistência DES para metade). Aumenta 1d6 aos níveis 6, 11 e 16."
+        }
+      ]
+    }
+  },
+  {
+    "id": "elfo",
+    "nome": "Elfo",
+    "descricao": "Povo mágico com graça sobrenatural, vivendo no mundo mas não inteiramente parte dele.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "DES": 2
+    },
+    "idiomas": [
+      "Elfico",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Ancestralidade Feérica",
+        "descricao": "Vantagem contra ser Enfeitiçado, imune a magias de sono."
+      },
+      {
+        "nome": "Sentidos Afiados",
+        "descricao": "Proficiência em Percepção."
+      },
+      {
+        "nome": "Transe",
+        "descricao": "Não dorme. Descanso prolongado de apenas 4 horas."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+      }
+    ],
+    "subRacas": [
+      {
+        "nome": "Alto Elfo",
+        "atributos": {
+          "INT": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Idioma Extra",
+            "descricao": "Hábil em um idioma adicional."
+          },
+          {
+            "nome": "Treino em Arma",
+            "descricao": "Proficiência em Espada Longa, Espada Curta, Arco Longo e Arco Curto."
+          },
+          {
+            "nome": "Truque",
+            "descricao": "Conhece um truque da lista de Mago."
+          }
+        ]
+      },
+      {
+        "nome": "Eladrin",
+        "atributos": {
+          "CAR": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Passo Feérico",
+            "descricao": "Uma vez por descanso curto pode se teletransportar a até 9m com ação bônus. A partir do nível 3 gera efeito adicional por estação (CD baseada em CAR).",
+            "estacoes": [
+              {
+                "nome": "Inverno",
+                "efeito": "Criatura adjacente antes do teletransporte fica Assustada. Resistência de SAB nega."
+              },
+              {
+                "nome": "Outono",
+                "efeito": "Até duas criaturas a até 3m devem passar em SAB ou ficarem Enfeitiçadas por 1 minuto."
+              },
+              {
+                "nome": "Primavera",
+                "efeito": "Teletransporta aliado adjacente tocado ao invés de você."
+              },
+              {
+                "nome": "Verão",
+                "efeito": "Criaturas adjacentes sofrem CAR em dano de fogo."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Elfo Marinho",
+        "atributos": {
+          "CON": 1
+        },
+        "idiomas_adicionais": [
+          "Aquan"
+        ],
+        "habilidades": [
+          {
+            "nome": "Treino em Arma",
+            "descricao": "Proficiência em Lança, Tridente, Besta Leve e Rede."
+          },
+          {
+            "nome": "Filho do Mar",
+            "descricao": "Deslocamento de nado 9m e pode respirar água."
+          },
+          {
+            "nome": "Amigo do Mar",
+            "descricao": "Pode comunicar ideias simples com feras com deslocamento de nado."
+          }
+        ]
+      },
+      {
+        "nome": "Elfo Negro",
+        "atributos": {
+          "CAR": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Magia",
+            "descricao": "Truque: Globos de Luz. Nível 3: Fogo Feérico uma vez por dia. Nível 5: Escuridão uma vez por dia."
+          },
+          {
+            "nome": "Sensibilidade à Luz",
+            "descricao": "Desvantagem em ataque, Percepção e Investigação de visão sob luz solar."
+          },
+          {
+            "nome": "Visão no Escuro Superior",
+            "descricao": "Alcance estendido para 36m."
+          }
+        ]
+      },
+      {
+        "nome": "Elfo Silvestre",
+        "atributos": {
+          "SAB": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Treino em Arma",
+            "descricao": "Proficiência em Espada Longa, Espada Curta, Arco Longo e Arco Curto."
+          },
+          {
+            "nome": "Pé Rápido",
+            "descricao": "+1,5m de deslocamento."
+          },
+          {
+            "nome": "Máscara do Ermo",
+            "descricao": "Pode se esconder levemente obscurecido por fenômeno natural."
+          }
+        ]
+      },
+      {
+        "nome": "Shadar-kai",
+        "atributos": {
+          "CON": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Resistência Necrótica",
+            "descricao": "Resistência a dano necrótico."
+          },
+          {
+            "nome": "Bênção da Rainha Corvo",
+            "descricao": "Uma vez por descanso curto pode se teletransportar a até 9m com ação bônus."
+          }
+        ]
+      }
+    ],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Elfo",
+      "descricao": "Povo mágico com graça sobrenatural, vivendo no mundo mas não inteiramente parte dele.",
+      "atributos": {
+        "DES": 2
+      },
+      "tendencia_comum": "Bom Caótico",
+      "idade": {
+        "adulto_aos": 100,
+        "expectativa_de_vida": 750
+      },
+      "tamanho": "Médio",
+      "altura_m": "menos de 1,50 a 1,80",
+      "idiomas": [
+        "Elfico",
+        "Comum"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Ancestralidade Feérica",
+          "descricao": "Vantagem contra ser Enfeitiçado, imune a magias de sono."
+        },
+        {
+          "nome": "Sentidos Afiados",
+          "descricao": "Proficiência em Percepção."
+        },
+        {
+          "nome": "Transe",
+          "descricao": "Não dorme. Descanso prolongado de apenas 4 horas."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+        }
+      ],
+      "sub_racas": [
+        {
+          "nome": "Alto Elfo",
+          "atributos": {
+            "INT": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Idioma Extra",
+              "descricao": "Hábil em um idioma adicional."
+            },
+            {
+              "nome": "Treino em Arma",
+              "descricao": "Proficiência em Espada Longa, Espada Curta, Arco Longo e Arco Curto."
+            },
+            {
+              "nome": "Truque",
+              "descricao": "Conhece um truque da lista de Mago."
+            }
+          ]
+        },
+        {
+          "nome": "Eladrin",
+          "atributos": {
+            "CAR": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Passo Feérico",
+              "descricao": "Uma vez por descanso curto pode se teletransportar a até 9m com ação bônus. A partir do nível 3 gera efeito adicional por estação (CD baseada em CAR).",
+              "estacoes": [
+                {
+                  "nome": "Inverno",
+                  "efeito": "Criatura adjacente antes do teletransporte fica Assustada. Resistência de SAB nega."
+                },
+                {
+                  "nome": "Outono",
+                  "efeito": "Até duas criaturas a até 3m devem passar em SAB ou ficarem Enfeitiçadas por 1 minuto."
+                },
+                {
+                  "nome": "Primavera",
+                  "efeito": "Teletransporta aliado adjacente tocado ao invés de você."
+                },
+                {
+                  "nome": "Verão",
+                  "efeito": "Criaturas adjacentes sofrem CAR em dano de fogo."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Elfo Marinho",
+          "atributos": {
+            "CON": 1
+          },
+          "idiomas_adicionais": [
+            "Aquan"
+          ],
+          "habilidades": [
+            {
+              "nome": "Treino em Arma",
+              "descricao": "Proficiência em Lança, Tridente, Besta Leve e Rede."
+            },
+            {
+              "nome": "Filho do Mar",
+              "descricao": "Deslocamento de nado 9m e pode respirar água."
+            },
+            {
+              "nome": "Amigo do Mar",
+              "descricao": "Pode comunicar ideias simples com feras com deslocamento de nado."
+            }
+          ]
+        },
+        {
+          "nome": "Elfo Negro",
+          "atributos": {
+            "CAR": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Magia",
+              "descricao": "Truque: Globos de Luz. Nível 3: Fogo Feérico uma vez por dia. Nível 5: Escuridão uma vez por dia."
+            },
+            {
+              "nome": "Sensibilidade à Luz",
+              "descricao": "Desvantagem em ataque, Percepção e Investigação de visão sob luz solar."
+            },
+            {
+              "nome": "Visão no Escuro Superior",
+              "descricao": "Alcance estendido para 36m."
+            }
+          ]
+        },
+        {
+          "nome": "Elfo Silvestre",
+          "atributos": {
+            "SAB": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Treino em Arma",
+              "descricao": "Proficiência em Espada Longa, Espada Curta, Arco Longo e Arco Curto."
+            },
+            {
+              "nome": "Pé Rápido",
+              "descricao": "+1,5m de deslocamento."
+            },
+            {
+              "nome": "Máscara do Ermo",
+              "descricao": "Pode se esconder levemente obscurecido por fenômeno natural."
+            }
+          ]
+        },
+        {
+          "nome": "Shadar-kai",
+          "atributos": {
+            "CON": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Resistência Necrótica",
+              "descricao": "Resistência a dano necrótico."
+            },
+            {
+              "nome": "Bênção da Rainha Corvo",
+              "descricao": "Uma vez por descanso curto pode se teletransportar a até 9m com ação bônus."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "firbolg",
+    "nome": "Firbolg",
+    "descricao": "Criaturas do ermo, pacatos servos da natureza, versados em conhecimento druídico.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "SAB": 2,
+      "FOR": 1
+    },
+    "idiomas": [
+      "Comum",
+      "Elfico",
+      "Gigante"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Físico Poderoso",
+        "descricao": "Conta como um passo maior ao determinar carga."
+      },
+      {
+        "nome": "Magia Firbolg",
+        "descricao": "Uma vez por descanso pode usar Detectar Magia ou Disfarçar-se."
+      },
+      {
+        "nome": "Passo Oculto",
+        "descricao": "Uma vez por descanso pode ficar invisível até o começo do próximo turno."
+      },
+      {
+        "nome": "Voz da Fera e Folha",
+        "descricao": "Feras conseguem entendê-lo parcialmente. Vantagem para influenciá-las."
+      }
+    ],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Firbolg",
+      "descricao": "Criaturas do ermo, pacatos servos da natureza, versados em conhecimento druídico.",
+      "atributos": {
+        "SAB": 2,
+        "FOR": 1
+      },
+      "tendencia_comum": "Bom Neutro",
+      "idade": {
+        "adulto_aos": 30,
+        "expectativa_de_vida": 500
+      },
+      "tamanho": "Médio",
+      "idiomas": [
+        "Comum",
+        "Elfico",
+        "Gigante"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Físico Poderoso",
+          "descricao": "Conta como um passo maior ao determinar carga."
+        },
+        {
+          "nome": "Magia Firbolg",
+          "descricao": "Uma vez por descanso pode usar Detectar Magia ou Disfarçar-se."
+        },
+        {
+          "nome": "Passo Oculto",
+          "descricao": "Uma vez por descanso pode ficar invisível até o começo do próximo turno."
+        },
+        {
+          "nome": "Voz da Fera e Folha",
+          "descricao": "Feras conseguem entendê-lo parcialmente. Vantagem para influenciá-las."
+        }
+      ]
+    }
+  },
+  {
+    "id": "gith",
+    "nome": "Gith",
+    "descricao": "Povo dividido entre os guerreiros Githyanki do Plano Astral e os monges contemplativos Githzerai do Limbo.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "INT": 1
+    },
+    "idiomas": [
+      "Gith",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [],
+    "subRacas": [
+      {
+        "nome": "Githyanki",
+        "atributos": {
+          "FOR": 2
+        },
+        "tendencia_comum": "Mau Leal",
+        "habilidades": [
+          {
+            "nome": "Maestria Decadente",
+            "descricao": "Aprende um idioma adicional e uma perícia ou ferramenta adicional."
+          },
+          {
+            "nome": "Proficiências",
+            "descricao": "Armaduras leves e médias, espadas curtas, longas e de duas mãos."
+          },
+          {
+            "nome": "Psiquismo Githyanki",
+            "descricao": "Truque: Mãos Mágicas (invisível). Nível 3: Saltar. Nível 5: Passo da Neblina. Baseados em SAB."
+          }
+        ]
+      },
+      {
+        "nome": "Githzerai",
+        "atributos": {
+          "SAB": 2
+        },
+        "tendencia_comum": "Leal Neutro",
+        "habilidades": [
+          {
+            "nome": "Disciplina Mental",
+            "descricao": "Vantagem contra Enfeitiçado e Assustado."
+          },
+          {
+            "nome": "Proficiências",
+            "descricao": "Armaduras leves e médias, espadas curtas, longas e de duas mãos."
+          },
+          {
+            "nome": "Psiquismo Githzerai",
+            "descricao": "Truque: Mãos Mágicas (invisível). Nível 3: Escudo. Nível 5: Detectar Pensamentos. Baseados em INT."
+          }
+        ]
+      }
+    ],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Gith",
+      "descricao": "Povo dividido entre os guerreiros Githyanki do Plano Astral e os monges contemplativos Githzerai do Limbo.",
+      "atributos": {
+        "INT": 1
+      },
+      "idade": {
+        "adulto_aos": 20,
+        "expectativa_de_vida": 100
+      },
+      "tamanho": "Médio",
+      "altura_m": "cerca de 1,80",
+      "idiomas": [
+        "Gith",
+        "Comum"
+      ],
+      "deslocamento_m": 9,
+      "sub_racas": [
+        {
+          "nome": "Githyanki",
+          "atributos": {
+            "FOR": 2
+          },
+          "tendencia_comum": "Mau Leal",
+          "habilidades": [
+            {
+              "nome": "Maestria Decadente",
+              "descricao": "Aprende um idioma adicional e uma perícia ou ferramenta adicional."
+            },
+            {
+              "nome": "Proficiências",
+              "descricao": "Armaduras leves e médias, espadas curtas, longas e de duas mãos."
+            },
+            {
+              "nome": "Psiquismo Githyanki",
+              "descricao": "Truque: Mãos Mágicas (invisível). Nível 3: Saltar. Nível 5: Passo da Neblina. Baseados em SAB."
+            }
+          ]
+        },
+        {
+          "nome": "Githzerai",
+          "atributos": {
+            "SAB": 2
+          },
+          "tendencia_comum": "Leal Neutro",
+          "habilidades": [
+            {
+              "nome": "Disciplina Mental",
+              "descricao": "Vantagem contra Enfeitiçado e Assustado."
+            },
+            {
+              "nome": "Proficiências",
+              "descricao": "Armaduras leves e médias, espadas curtas, longas e de duas mãos."
+            },
+            {
+              "nome": "Psiquismo Githzerai",
+              "descricao": "Truque: Mãos Mágicas (invisível). Nível 3: Escudo. Nível 5: Detectar Pensamentos. Baseados em INT."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "gnomo",
+    "nome": "Gnomo",
+    "descricao": "Povo que aproveita a vida com dedicação, inventividade e curiosidade.",
+    "deslocamento": 7.5,
+    "bonusAtributos": {
+      "INT": 2
+    },
+    "idiomas": [
+      "Gnômico",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Esperteza Gnômica",
+        "descricao": "Vantagem em resistências de INT, SAB ou CAR contra magias."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+      }
+    ],
+    "subRacas": [
+      {
+        "nome": "Gnomo da Floresta",
+        "atributos": {
+          "DES": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Ilusionista Natural",
+            "descricao": "Conhece o Truque Ilusão Menor."
+          },
+          {
+            "nome": "Falar com Feras Pequenas",
+            "descricao": "Pode comunicar ideias simples para feras Pequenas ou menores."
+          }
+        ]
+      },
+      {
+        "nome": "Gnomo das Profundezas",
+        "atributos": {
+          "DES": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Camuflagem de Pedra",
+            "descricao": "Vantagem para se esconder em terreno rochoso."
+          },
+          {
+            "nome": "Visão no Escuro Superior",
+            "descricao": "Alcance estendido para 36m."
+          }
+        ]
+      },
+      {
+        "nome": "Gnomo da Rocha",
+        "atributos": {
+          "CON": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Conhecimento do Artífice",
+            "descricao": "Dobro de proficiência em História sobre itens mágicos, alquímicos e tecnológicos."
+          },
+          {
+            "nome": "Engenhoca",
+            "descricao": "Proficiente com Ferramentas de Engenhoqueiro. Com 10po e 1 hora cria um mecanismo (CA 5, 1 PA) que dura 24h. Máximo de 3 ativos.",
+            "opcoes": [
+              {
+                "tipo": "Brinquedo",
+                "descricao": "Move-se 1,5m aleatoriamente. Faz sons temáticos."
+              },
+              {
+                "tipo": "Caixa de Música",
+                "descricao": "Toca uma música pré-determinada em volume moderado."
+              },
+              {
+                "tipo": "Isqueiro",
+                "descricao": "Produz chama miniatura para acender outras coisas."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "variantes": null,
+    "tamanho": "Pequeno",
+    "raw": {
+      "nome": "Gnomo",
+      "descricao": "Povo que aproveita a vida com dedicação, inventividade e curiosidade.",
+      "atributos": {
+        "INT": 2
+      },
+      "tendencia_comum": "Bom Neutro",
+      "idade": {
+        "adulto_aos": 40,
+        "expectativa_de_vida": 500
+      },
+      "tamanho": "Pequeno",
+      "altura_m": "0,90 a 1,20",
+      "peso_kg": 20,
+      "idiomas": [
+        "Gnômico",
+        "Comum"
+      ],
+      "deslocamento_m": 7.5,
+      "habilidades": [
+        {
+          "nome": "Esperteza Gnômica",
+          "descricao": "Vantagem em resistências de INT, SAB ou CAR contra magias."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+        }
+      ],
+      "sub_racas": [
+        {
+          "nome": "Gnomo da Floresta",
+          "atributos": {
+            "DES": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Ilusionista Natural",
+              "descricao": "Conhece o Truque Ilusão Menor."
+            },
+            {
+              "nome": "Falar com Feras Pequenas",
+              "descricao": "Pode comunicar ideias simples para feras Pequenas ou menores."
+            }
+          ]
+        },
+        {
+          "nome": "Gnomo das Profundezas",
+          "atributos": {
+            "DES": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Camuflagem de Pedra",
+              "descricao": "Vantagem para se esconder em terreno rochoso."
+            },
+            {
+              "nome": "Visão no Escuro Superior",
+              "descricao": "Alcance estendido para 36m."
+            }
+          ]
+        },
+        {
+          "nome": "Gnomo da Rocha",
+          "atributos": {
+            "CON": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Conhecimento do Artífice",
+              "descricao": "Dobro de proficiência em História sobre itens mágicos, alquímicos e tecnológicos."
+            },
+            {
+              "nome": "Engenhoca",
+              "descricao": "Proficiente com Ferramentas de Engenhoqueiro. Com 10po e 1 hora cria um mecanismo (CA 5, 1 PA) que dura 24h. Máximo de 3 ativos.",
+              "opcoes": [
+                {
+                  "tipo": "Brinquedo",
+                  "descricao": "Move-se 1,5m aleatoriamente. Faz sons temáticos."
+                },
+                {
+                  "tipo": "Caixa de Música",
+                  "descricao": "Toca uma música pré-determinada em volume moderado."
+                },
+                {
+                  "tipo": "Isqueiro",
+                  "descricao": "Produz chama miniatura para acender outras coisas."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "goliath",
+    "nome": "Goliath",
+    "descricao": "Gigantes das montanhas com corpos que parecem ser feitos de pedra, raramente vistos.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "FOR": 2,
+      "CON": 1
+    },
+    "idiomas": [
+      "Comum",
+      "Gigante"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Atleta Natural",
+        "descricao": "Proficiência em Atletismo."
+      },
+      {
+        "nome": "Firmeza da Pedra",
+        "descricao": "Uma vez por descanso curto com Reação reduz dano sofrido em 1d12+CON."
+      },
+      {
+        "nome": "Físico Poderoso",
+        "descricao": "Conta como uma categoria maior ao determinar capacidade de carga."
+      },
+      {
+        "nome": "Montanhista",
+        "descricao": "Aclimatizado a altitude elevada (acima de 6000m) e clima frio."
+      }
+    ],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Goliath",
+      "descricao": "Gigantes das montanhas com corpos que parecem ser feitos de pedra, raramente vistos.",
+      "atributos": {
+        "FOR": 2,
+        "CON": 1
+      },
+      "tendencia_comum": "Leal Neutro",
+      "idade": {
+        "descricao": "Como humanos"
+      },
+      "tamanho": "Médio",
+      "peso_kg": "140 a 170",
+      "idiomas": [
+        "Comum",
+        "Gigante"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Atleta Natural",
+          "descricao": "Proficiência em Atletismo."
+        },
+        {
+          "nome": "Firmeza da Pedra",
+          "descricao": "Uma vez por descanso curto com Reação reduz dano sofrido em 1d12+CON."
+        },
+        {
+          "nome": "Físico Poderoso",
+          "descricao": "Conta como uma categoria maior ao determinar capacidade de carga."
+        },
+        {
+          "nome": "Montanhista",
+          "descricao": "Aclimatizado a altitude elevada (acima de 6000m) e clima frio."
+        }
+      ]
+    }
+  },
+  {
+    "id": "halfling",
+    "nome": "Halfling",
+    "descricao": "Povo que valoriza os confortos do lar, paz e silêncio, longe de perigos.",
+    "deslocamento": 7.5,
+    "bonusAtributos": {
+      "DES": 2
+    },
+    "idiomas": [
+      "Halfling",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Agilidade Halfling",
+        "descricao": "Pode se mover pelo espaço de criaturas maiores."
+      },
+      {
+        "nome": "Corajoso",
+        "descricao": "Vantagem em resistência contra medo."
+      },
+      {
+        "nome": "Sortudo",
+        "descricao": "Pode re-rolar resultados de 1 no d20."
+      }
+    ],
+    "subRacas": [
+      {
+        "nome": "Coração Forte",
+        "atributos": {
+          "CON": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Resiliência",
+            "descricao": "Resistência a dano de veneno e Vantagem contra veneno."
+          }
+        ]
+      },
+      {
+        "nome": "Pés Leves",
+        "atributos": {
+          "CAR": 1
+        },
+        "habilidades": [
+          {
+            "nome": "Naturalmente Furtivo",
+            "descricao": "Pode se esconder quando obscurecido por uma criatura maior."
+          }
+        ]
+      }
+    ],
+    "variantes": null,
+    "tamanho": "Pequeno",
+    "raw": {
+      "nome": "Halfling",
+      "descricao": "Povo que valoriza os confortos do lar, paz e silêncio, longe de perigos.",
+      "atributos": {
+        "DES": 2
+      },
+      "tendencia_comum": "Bom Leal",
+      "idade": {
+        "adulto_aos": 50,
+        "expectativa_de_vida": 350
+      },
+      "tamanho": "Pequeno",
+      "altura_m": "cerca de 0,90",
+      "peso_kg": 20,
+      "idiomas": [
+        "Halfling",
+        "Comum"
+      ],
+      "deslocamento_m": 7.5,
+      "habilidades": [
+        {
+          "nome": "Agilidade Halfling",
+          "descricao": "Pode se mover pelo espaço de criaturas maiores."
+        },
+        {
+          "nome": "Corajoso",
+          "descricao": "Vantagem em resistência contra medo."
+        },
+        {
+          "nome": "Sortudo",
+          "descricao": "Pode re-rolar resultados de 1 no d20."
+        }
+      ],
+      "sub_racas": [
+        {
+          "nome": "Coração Forte",
+          "atributos": {
+            "CON": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Resiliência",
+              "descricao": "Resistência a dano de veneno e Vantagem contra veneno."
+            }
+          ]
+        },
+        {
+          "nome": "Pés Leves",
+          "atributos": {
+            "CAR": 1
+          },
+          "habilidades": [
+            {
+              "nome": "Naturalmente Furtivo",
+              "descricao": "Pode se esconder quando obscurecido por uma criatura maior."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "humano",
+    "nome": "Humano",
+    "descricao": "A mais nova das raças, com razões e culturas diversas, inovadores, desbravadores e pioneiros.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "todos": 1
+    },
+    "idiomas": [
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Humano",
+      "descricao": "A mais nova das raças, com razões e culturas diversas, inovadores, desbravadores e pioneiros.",
+      "atributos": {
+        "todos": 1
+      },
+      "tendencia_comum": "Nenhuma",
+      "idade": {
+        "adulto_aos": 15,
+        "expectativa_de_vida": "menos de 100"
+      },
+      "tamanho": "Médio",
+      "altura_m": "1,50 a mais de 1,80",
+      "idiomas": [
+        "Comum"
+      ],
+      "deslocamento_m": 9,
+      "variante": {
+        "nome": "Humano Variante",
+        "nota": "Requer permissão do mestre.",
+        "atributos": "+1 para dois atributos à escolha",
+        "habilidades": [
+          {
+            "nome": "Perícia",
+            "descricao": "Proficiência em uma perícia."
+          },
+          {
+            "nome": "Talento",
+            "descricao": "Começa o jogo com um talento."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "kenku",
+    "nome": "Kenku",
+    "descricao": "Povo corvo amaldiçoado a não possuir mais suas asas. Vivem em locais marginalizados.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "DES": 2,
+      "SAB": 1
+    },
+    "idiomas": [
+      "Comum",
+      "Auran (somente via Imitar)"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Especialista em Falsificação",
+        "descricao": "Vantagem para criar duplicatas e falsificações."
+      },
+      {
+        "nome": "Treino Kenku",
+        "descricao": "Proficiente em uma perícia entre Acrobacia, Enganação, Furtividade e Prestidigitação."
+      },
+      {
+        "nome": "Imitar",
+        "descricao": "Pode imitar sons e vozes. Detectável com Intuição contra Enganação."
+      }
+    ],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Kenku",
+      "descricao": "Povo corvo amaldiçoado a não possuir mais suas asas. Vivem em locais marginalizados.",
+      "atributos": {
+        "DES": 2,
+        "SAB": 1
+      },
+      "tendencia_comum": "Caótico Neutro",
+      "idade": {
+        "adulto_aos": 12,
+        "expectativa_de_vida": 60
+      },
+      "tamanho": "Médio",
+      "peso_kg": "45 a 60",
+      "idiomas": [
+        "Comum",
+        "Auran (somente via Imitar)"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Especialista em Falsificação",
+          "descricao": "Vantagem para criar duplicatas e falsificações."
+        },
+        {
+          "nome": "Treino Kenku",
+          "descricao": "Proficiente em uma perícia entre Acrobacia, Enganação, Furtividade e Prestidigitação."
+        },
+        {
+          "nome": "Imitar",
+          "descricao": "Pode imitar sons e vozes. Detectável com Intuição contra Enganação."
+        }
+      ]
+    }
+  },
+  {
+    "id": "meio-elfo",
+    "nome": "Meio-Elfo",
+    "descricao": "Andando em dois mundos sem pertencer a nenhum, combinam ambição humana com os sentidos e arte élfica.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "CAR": 2,
+      "outro_a_escolha": 1
+    },
+    "idiomas": [
+      "Elfico",
+      "Comum",
+      "mais um idioma"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Ancestralidade Feérica",
+        "descricao": "Vantagem contra ser Enfeitiçado, imune a magias de sono."
+      },
+      {
+        "nome": "Versatilidade",
+        "descricao": "Proficiência em duas perícias à escolha."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+      }
+    ],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Meio-Elfo",
+      "descricao": "Andando em dois mundos sem pertencer a nenhum, combinam ambição humana com os sentidos e arte élfica.",
+      "atributos": {
+        "CAR": 2,
+        "outro_a_escolha": 1
+      },
+      "tendencia_comum": "Caótico Neutro",
+      "idade": {
+        "adulto_aos": 15,
+        "expectativa_de_vida": 180
+      },
+      "tamanho": "Médio",
+      "altura_m": "1,20 a 1,50",
+      "peso_kg": 75,
+      "idiomas": [
+        "Elfico",
+        "Comum",
+        "mais um idioma"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Ancestralidade Feérica",
+          "descricao": "Vantagem contra ser Enfeitiçado, imune a magias de sono."
+        },
+        {
+          "nome": "Versatilidade",
+          "descricao": "Proficiência em duas perícias à escolha."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+        }
+      ]
+    }
+  },
+  {
+    "id": "meio-orc",
+    "nome": "Meio-Orc",
+    "descricao": "Filhos da fronteira entre orcs e humanos, fazem o necessário para sobreviver num mundo que os ignora.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "FOR": 2,
+      "CON": 1
+    },
+    "idiomas": [
+      "Orc",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Ataques Selvagens",
+        "descricao": "Quando consegue um decisivo rola um dado extra de dano."
+      },
+      {
+        "nome": "Intimidador",
+        "descricao": "Proficiência em Intimidar."
+      },
+      {
+        "nome": "Tolerância Infindável",
+        "descricao": "Uma vez por descanso longo, ao cair a 0 sem morrer, cai para 1 ao invés."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+      }
+    ],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Meio-Orc",
+      "descricao": "Filhos da fronteira entre orcs e humanos, fazem o necessário para sobreviver num mundo que os ignora.",
+      "atributos": {
+        "FOR": 2,
+        "CON": 1
+      },
+      "tendencia_comum": "Caótico Neutro",
+      "idade": {
+        "adulto_aos": 14,
+        "expectativa_de_vida": 75
+      },
+      "tamanho": "Médio",
+      "idiomas": [
+        "Orc",
+        "Comum"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Ataques Selvagens",
+          "descricao": "Quando consegue um decisivo rola um dado extra de dano."
+        },
+        {
+          "nome": "Intimidador",
+          "descricao": "Proficiência em Intimidar."
+        },
+        {
+          "nome": "Tolerância Infindável",
+          "descricao": "Uma vez por descanso longo, ao cair a 0 sem morrer, cai para 1 ao invés."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+        }
+      ]
+    }
+  },
+  {
+    "id": "tabaxi",
+    "nome": "Tabaxi",
+    "descricao": "Povo gato de terras distantes, motivado pela curiosidade de coletar artefatos, histórias e experiências.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "DES": 2,
+      "CAR": 1
+    },
+    "idiomas": [
+      "Comum",
+      "mais um idioma"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Agilidade Felina",
+        "descricao": "Pode dobrar o deslocamento ao se mover. Só pode fazer isso novamente após um turno parado."
+      },
+      {
+        "nome": "Garras de Gato",
+        "descricao": "Ataque desarmado 1d4+FOR cortante. Deslocamento de escalada 6m."
+      },
+      {
+        "nome": "Talento do Gato",
+        "descricao": "Proficiência em Percepção e Furtividade."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata luz baixa como luz normal e escuridão como luz baixa, ambos a até 18m."
+      }
+    ],
+    "subRacas": [],
+    "variantes": null,
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Tabaxi",
+      "descricao": "Povo gato de terras distantes, motivado pela curiosidade de coletar artefatos, histórias e experiências.",
+      "atributos": {
+        "DES": 2,
+        "CAR": 1
+      },
+      "tendencia_comum": "Caótico Neutro",
+      "idade": {
+        "descricao": "Equivalente a humanos"
+      },
+      "tamanho": "Médio",
+      "idiomas": [
+        "Comum",
+        "mais um idioma"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Agilidade Felina",
+          "descricao": "Pode dobrar o deslocamento ao se mover. Só pode fazer isso novamente após um turno parado."
+        },
+        {
+          "nome": "Garras de Gato",
+          "descricao": "Ataque desarmado 1d4+FOR cortante. Deslocamento de escalada 6m."
+        },
+        {
+          "nome": "Talento do Gato",
+          "descricao": "Proficiência em Percepção e Furtividade."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata luz baixa como luz normal e escuridão como luz baixa, ambos a até 18m."
+        }
+      ]
+    }
+  },
+  {
+    "id": "tiefling",
+    "nome": "Tiefling",
+    "descricao": "Povo amaldiçoado por um pacto com diabos feito gerações atrás. Vivem com desconfiança e medo ao redor.",
+    "deslocamento": 9,
+    "bonusAtributos": {
+      "CAR": 2,
+      "INT": 1
+    },
+    "idiomas": [
+      "Infernal",
+      "Comum"
+    ],
+    "proficiencias": [],
+    "habilidades": [
+      {
+        "nome": "Legado Infernal",
+        "descricao": "Truque: Taumaturgia. Nível 3: Repreensão Infernal. Nível 5: Escuridão."
+      },
+      {
+        "nome": "Resistência Diabólica",
+        "descricao": "Resistência a Fogo."
+      },
+      {
+        "nome": "Visão no Escuro",
+        "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+      },
+      {
+        "nome": "Habilidade Extra (escolha uma)",
+        "opcoes": [
+          {
+            "nome": "Asas",
+            "descricao": "Asas de morcego e deslocamento de voo 9m."
+          },
+          {
+            "nome": "Fogo Infernal",
+            "descricao": "Nível 3: Mãos Flamejantes como magia nível 2, uma vez por dia."
+          },
+          {
+            "nome": "Língua Demoníaca",
+            "descricao": "Truque: Escárnio Terrível. Nível 3: Enfeitiçar Pessoa. Nível 5: Cativar."
+          }
+        ]
+      }
+    ],
+    "subRacas": [],
+    "variantes": {
+      "nota": "Substituem atributos e habilidades especiais base. Magias nível 3 usadas como nível 2, nível 5 como nível 3. Chave: CAR.",
+      "opcoes": [
+        {
+          "nome": "Baalzebul",
+          "atributos": {
+            "CAR": 2,
+            "INT": 1
+          },
+          "legado": "Maladomini",
+          "magias": {
+            "truque": "Taumaturgia",
+            "nivel_3": "Raio do Enjoo",
+            "nivel_5": "Coroa da Loucura"
+          }
+        },
+        {
+          "nome": "Dispater",
+          "atributos": {
+            "CAR": 2,
+            "DES": 1
+          },
+          "legado": "Dis",
+          "magias": {
+            "truque": "Taumaturgia",
+            "nivel_3": "Disfarçar-se",
+            "nivel_5": "Detectar Pensamento"
+          }
+        },
+        {
+          "nome": "Fierna",
+          "atributos": {
+            "CAR": 2,
+            "SAB": 1
+          },
+          "legado": "Phlegethos",
+          "magias": {
+            "truque": "Amigos",
+            "nivel_3": "Enfeitiçar Pessoa",
+            "nivel_5": "Coroa da Loucura"
+          }
+        },
+        {
+          "nome": "Glasya",
+          "atributos": {
+            "CAR": 2,
+            "DES": 1
+          },
+          "legado": "Malbolge",
+          "magias": {
+            "truque": "Ilusão Menor",
+            "nivel_3": "Disfarçar-se",
+            "nivel_5": "Invisibilidade"
+          }
+        },
+        {
+          "nome": "Levistus",
+          "atributos": {
+            "CAR": 2,
+            "CON": 1
+          },
+          "legado": "Stygia",
+          "magias": {
+            "truque": "Raio de Gelo",
+            "nivel_3": "Armadura de Agathys",
+            "nivel_5": "Escuridão"
+          }
+        },
+        {
+          "nome": "Mammon",
+          "atributos": {
+            "CAR": 2,
+            "INT": 1
+          },
+          "legado": "Minauros",
+          "magias": {
+            "truque": "Mãos Mágicas",
+            "nivel_3": "Disco Flutuante",
+            "nivel_5": "Tranca Arcana"
+          }
+        },
+        {
+          "nome": "Mephistopheles",
+          "atributos": {
+            "CAR": 2,
+            "INT": 1
+          },
+          "legado": "Cania",
+          "magias": {
+            "truque": "Mãos Mágicas",
+            "nivel_3": "Mãos Flamejantes",
+            "nivel_5": "Lâmina de Fogo"
+          }
+        },
+        {
+          "nome": "Zariel",
+          "atributos": {
+            "CAR": 2,
+            "FOR": 1
+          },
+          "legado": "Avernus",
+          "magias": {
+            "truque": "Taumaturgia",
+            "nivel_3": "Destruição Ardente",
+            "nivel_5": "Destruição Marcante"
+          }
+        }
+      ]
+    },
+    "tamanho": "Médio",
+    "raw": {
+      "nome": "Tiefling",
+      "descricao": "Povo amaldiçoado por um pacto com diabos feito gerações atrás. Vivem com desconfiança e medo ao redor.",
+      "atributos": {
+        "CAR": 2,
+        "INT": 1
+      },
+      "tendencia_comum": "Mau Leal",
+      "idade": {
+        "descricao": "Como Humanos"
+      },
+      "tamanho": "Médio",
+      "idiomas": [
+        "Infernal",
+        "Comum"
+      ],
+      "deslocamento_m": 9,
+      "habilidades": [
+        {
+          "nome": "Legado Infernal",
+          "descricao": "Truque: Taumaturgia. Nível 3: Repreensão Infernal. Nível 5: Escuridão."
+        },
+        {
+          "nome": "Resistência Diabólica",
+          "descricao": "Resistência a Fogo."
+        },
+        {
+          "nome": "Visão no Escuro",
+          "descricao": "Trata escuridão a até 18m como Luz Baixa, e luz baixa como brilhante."
+        },
+        {
+          "nome": "Habilidade Extra (escolha uma)",
+          "opcoes": [
+            {
+              "nome": "Asas",
+              "descricao": "Asas de morcego e deslocamento de voo 9m."
+            },
+            {
+              "nome": "Fogo Infernal",
+              "descricao": "Nível 3: Mãos Flamejantes como magia nível 2, uma vez por dia."
+            },
+            {
+              "nome": "Língua Demoníaca",
+              "descricao": "Truque: Escárnio Terrível. Nível 3: Enfeitiçar Pessoa. Nível 5: Cativar."
+            }
+          ]
+        }
+      ],
+      "sub_racas_infernais": {
+        "nota": "Substituem atributos e habilidades especiais base. Magias nível 3 usadas como nível 2, nível 5 como nível 3. Chave: CAR.",
+        "opcoes": [
+          {
+            "nome": "Baalzebul",
+            "atributos": {
+              "CAR": 2,
+              "INT": 1
+            },
+            "legado": "Maladomini",
+            "magias": {
+              "truque": "Taumaturgia",
+              "nivel_3": "Raio do Enjoo",
+              "nivel_5": "Coroa da Loucura"
+            }
+          },
+          {
+            "nome": "Dispater",
+            "atributos": {
+              "CAR": 2,
+              "DES": 1
+            },
+            "legado": "Dis",
+            "magias": {
+              "truque": "Taumaturgia",
+              "nivel_3": "Disfarçar-se",
+              "nivel_5": "Detectar Pensamento"
+            }
+          },
+          {
+            "nome": "Fierna",
+            "atributos": {
+              "CAR": 2,
+              "SAB": 1
+            },
+            "legado": "Phlegethos",
+            "magias": {
+              "truque": "Amigos",
+              "nivel_3": "Enfeitiçar Pessoa",
+              "nivel_5": "Coroa da Loucura"
+            }
+          },
+          {
+            "nome": "Glasya",
+            "atributos": {
+              "CAR": 2,
+              "DES": 1
+            },
+            "legado": "Malbolge",
+            "magias": {
+              "truque": "Ilusão Menor",
+              "nivel_3": "Disfarçar-se",
+              "nivel_5": "Invisibilidade"
+            }
+          },
+          {
+            "nome": "Levistus",
+            "atributos": {
+              "CAR": 2,
+              "CON": 1
+            },
+            "legado": "Stygia",
+            "magias": {
+              "truque": "Raio de Gelo",
+              "nivel_3": "Armadura de Agathys",
+              "nivel_5": "Escuridão"
+            }
+          },
+          {
+            "nome": "Mammon",
+            "atributos": {
+              "CAR": 2,
+              "INT": 1
+            },
+            "legado": "Minauros",
+            "magias": {
+              "truque": "Mãos Mágicas",
+              "nivel_3": "Disco Flutuante",
+              "nivel_5": "Tranca Arcana"
+            }
+          },
+          {
+            "nome": "Mephistopheles",
+            "atributos": {
+              "CAR": 2,
+              "INT": 1
+            },
+            "legado": "Cania",
+            "magias": {
+              "truque": "Mãos Mágicas",
+              "nivel_3": "Mãos Flamejantes",
+              "nivel_5": "Lâmina de Fogo"
+            }
+          },
+          {
+            "nome": "Zariel",
+            "atributos": {
+              "CAR": 2,
+              "FOR": 1
+            },
+            "legado": "Avernus",
+            "magias": {
+              "truque": "Taumaturgia",
+              "nivel_3": "Destruição Ardente",
+              "nivel_5": "Destruição Marcante"
+            }
+          }
+        ]
+      }
+    }
+  }
+]
