@@ -1,6 +1,7 @@
 import { createInitialState } from './core/state.js';
 import { loadClasses } from './modules/classes/class-loader.js';
 import { loadRaces } from './modules/races/race-loader.js';
+import { loadBackgrounds, getBackgroundById } from './modules/backgrounds/background-loader.js';
 import { loadAllItems } from './modules/items/item-normalizer.js';
 import { applyClassTheme } from './modules/theme/theme-manager.js';
 import { renderApp, getCurrentClass } from './ui/render.js';
@@ -51,6 +52,7 @@ normalizeCharacter(state.character);
 const data = {
   classes: [],
   races: [],
+  backgrounds: [],
   items: [],
   spells: [],
   savedCharacters: [],
@@ -130,6 +132,7 @@ function render() {
     state,
     classes: data.classes,
     races: data.races,
+    backgrounds: data.backgrounds,
     items: data.items,
     spells: data.spells,
     savedCharacters: data.savedCharacters,
@@ -402,6 +405,15 @@ async function handleChange(event) {
     return;
   }
 
+  if (control.dataset.control === 'background') {
+    state.character.antecedente = control.value;
+    scheduleAutosave();
+    render();
+    const background = getBackgroundById(data.backgrounds, control.value);
+    showToast(background ? `Antecedente: ${background.nome}.` : 'Antecedente removido.');
+    return;
+  }
+
   if (control.dataset.control === 'subclass') {
     const primaryIndex = state.character.classes.findIndex((entry) => entry.principal);
     updateClassSubclass(state.character, primaryIndex, control.value);
@@ -618,6 +630,7 @@ async function handleStorageAction(action) {
         character: state.character,
         classes: data.classes,
         races: data.races,
+        backgrounds: data.backgrounds,
         items: data.items,
         spells: data.spells
       });
@@ -631,6 +644,7 @@ async function handleStorageAction(action) {
         character: state.character,
         classes: data.classes,
         races: data.races,
+        backgrounds: data.backgrounds,
         items: data.items,
         spells: data.spells
       });
@@ -657,18 +671,20 @@ async function init() {
 
   const errors = [];
 
-  const [classData, raceData, itemData, spellData] = await Promise.all([
+  const [classData, raceData, backgroundData, itemData, spellData] = await Promise.all([
     loadClasses({ onError: (error) => errors.push(error) }),
     loadRaces({ onError: (error) => errors.push(error) }),
+    loadBackgrounds({ onError: (error) => errors.push(error) }),
     loadAllItems({ onError: (error) => errors.push(error) }),
     loadSpells({ onError: (error) => errors.push(error) })
   ]);
 
   data.classes = classData.classes;
   data.races = raceData.races;
+  data.backgrounds = backgroundData.backgrounds;
   data.items = itemData.items;
   data.spells = spellData.spells;
-  data.errors = [...new Set([...errors, ...classData.errors, ...raceData.errors, ...itemData.errors, ...spellData.errors])];
+  data.errors = [...new Set([...errors, ...classData.errors, ...raceData.errors, ...backgroundData.errors, ...itemData.errors, ...spellData.errors])];
   normalizeCharacter(state.character);
   ensureInventory(state.character);
   refreshSavedCharacters();

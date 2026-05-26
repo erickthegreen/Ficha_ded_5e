@@ -1,0 +1,122 @@
+[
+  {
+    "id": "acolito",
+    "nome": "Acólito",
+    "pericias": ["Intuição (Sab)", "Religião (Int)"],
+    "idiomas": "Dois à sua escolha",
+    "ferramentas": ["Nenhuma"],
+    "ouro": "15 po"
+  },
+  {
+    "id": "assombrado",
+    "nome": "Assombrado",
+    "pericias": ["Escolha 2: Arcanismo (Int)", "Investigação (Int)", "Religião (Int)", "Sobrevivência (Sab)"],
+    "idiomas": "Dois à sua escolha",
+    "ferramentas": ["Nenhuma"],
+    "ouro": "1 pp"
+  },
+  {
+    "id": "artesao-da-guilda",
+    "nome": "Artesão da Guilda",
+    "pericias": ["Intuição (Sab)", "Persuasão (Car)"],
+    "idiomas": "Um, à sua escolha",
+    "ferramentas": ["Um tipo de ferramenta de artesão"],
+    "ouro": "15 po"
+  },
+  {
+    "id": "artista",
+    "nome": "Artista",
+    "pericias": ["Acrobacia (Des)", "Atuação (Car)"],
+    "idiomas": "Nenhum",
+    "ferramentas": ["Kit de disfarce", "Um tipo de instrumento musical"],
+    "ouro": "15 po"
+  },
+  {
+    "id": "charlatao",
+    "nome": "Charlatão",
+    "pericias": ["Enganação (Car)", "Prestidigitação (Des)"],
+    "idiomas": "Nenhum",
+    "ferramentas": ["Kit de disfarce", "Kit de falsificação"],
+    "ouro": "15 po"
+  },
+  {
+    "id": "criminoso",
+    "nome": "Criminoso",
+    "pericias": ["Enganação (Car)", "Furtividade (Des)"],
+    "idiomas": "Nenhum",
+    "ferramentas": ["Um tipo de kit de jogo", "Ferramentas de ladrão"],
+    "ouro": "15 po"
+  },
+  {
+    "id": "eremita",
+    "nome": "Eremita",
+    "pericias": ["Medicina (Sab)", "Religião (Int)"],
+    "idiomas": "Um, à sua escolha",
+    "ferramentas": ["Kit de herbalismo"],
+    "ouro": "5 po"
+  },
+  {
+    "id": "forasteiro",
+    "nome": "Forasteiro",
+    "pericias": ["Atletismo (For)", "Sobrevivência (Sab)"],
+    "idiomas": "Um, à sua escolha",
+    "ferramentas": ["Um tipo de instrumento musical"],
+    "ouro": "10 po"
+  },
+  {
+    "id": "heroi-do-povo",
+    "nome": "Herói do Povo",
+    "pericias": ["Adestrar Animais (Sab)", "Sobrevivência (Sab)"],
+    "idiomas": "Nenhum",
+    "ferramentas": ["Um tipo de ferramenta de artesão", "Veículos (terrestre)"],
+    "ouro": "10 po"
+  },
+  {
+    "id": "marinheiro",
+    "nome": "Marinheiro",
+    "pericias": ["Atletismo (For)", "Percepção (Sab)"],
+    "idiomas": "Nenhum",
+    "ferramentas": ["Ferramentas de navegador", "Veículo (aquático)"],
+    "ouro": "10 po"
+  },
+  {
+    "id": "nobre",
+    "nome": "Nobre",
+    "pericias": ["História (Int)", "Persuasão (Car)"],
+    "idiomas": "Um, à sua escolha",
+    "ferramentas": ["Um tipo de kit de jogo"],
+    "ouro": "25 po"
+  },
+  {
+    "id": "orfao",
+    "nome": "Órfão",
+    "pericias": ["Furtividade (Des)", "Prestidigitação (Des)"],
+    "idiomas": "Nenhum",
+    "ferramentas": ["Kit de disfarce", "Ferramentas de ladrão"],
+    "ouro": "10 po"
+  },
+  {
+    "id": "sabio",
+    "nome": "Sábio",
+    "pericias": ["Arcanismo (Int)", "História (Int)"],
+    "idiomas": "Dois à sua escolha",
+    "ferramentas": ["Nenhuma"],
+    "ouro": "10 po"
+  },
+  {
+    "id": "soldado",
+    "nome": "Soldado",
+    "pericias": ["Atletismo (For)", "Intimidação (Car)"],
+    "idiomas": "Nenhum",
+    "ferramentas": ["Um tipo de kit de jogo", "Veículos (terrestre)"],
+    "ouro": "10 po"
+  },
+  {
+    "id": "viajante-distante",
+    "nome": "Viajante Distante",
+    "pericias": ["Intuição (Sab)", "Percepção (Sab)"],
+    "idiomas": "Um, à sua escolha",
+    "ferramentas": ["Um tipo de kit de jogo ou instrumento musical", "Um tipo de arma exótica"],
+    "ouro": "5 po"
+  }
+]

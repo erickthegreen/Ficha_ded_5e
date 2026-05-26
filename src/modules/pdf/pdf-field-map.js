@@ -11,6 +11,7 @@ import {
 import { getPrimaryClassEntry } from '../character/character-model.js';
 import { getMulticlassFeatureGroups } from '../classes/multiclass-manager.js';
 import { getEquippedArmorEntry, getEquippedWeapons, getInventoryWeight } from '../items/inventory-manager.js';
+import { getBackgroundById } from '../backgrounds/background-loader.js';
 
 const ATTRIBUTES = [
   ['forca', 'Força'],
@@ -30,6 +31,11 @@ function classSummary(character, classesData) {
 
 function raceName(character, racesData) {
   return racesData.find((race) => race.id === character.raca)?.nome || character.raca || '';
+}
+
+function backgroundName(character, backgroundsData) {
+  const background = getBackgroundById(backgroundsData, character.antecedente);
+  return background?.nome || character.antecedente || '';
 }
 
 function primaryClass(character, classesData) {
@@ -102,7 +108,7 @@ function skills(character, classesData) {
   return (primaryClass(character, classesData)?.proficiencias?.periciasDisponiveis || []).join(', ');
 }
 
-export function buildPdfFieldValues({ character, classes = [], races = [] }) {
+export function buildPdfFieldValues({ character, classes = [], races = [], backgrounds = [] }) {
   const totalLevel = Math.max(1, calcularNivelTotal(character.classes || []));
   const proficiency = calcularBonusProficiencia(totalLevel);
   const classData = primaryClass(character, classes);
@@ -114,7 +120,7 @@ export function buildPdfFieldValues({ character, classes = [], races = [] }) {
     subclass: subclassName(character, classData),
     level: String(totalLevel),
     race: raceName(character, races),
-    background: character.antecedente || '',
+    background: backgroundName(character, backgrounds),
     alignment: character.tendencia || '',
     xp: String(character.xp || 0),
     proficiency_bonus: formatarBonus(proficiency),

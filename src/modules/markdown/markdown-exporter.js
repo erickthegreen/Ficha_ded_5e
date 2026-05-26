@@ -11,6 +11,7 @@ import {
 import { getPrimaryClassEntry } from '../character/character-model.js';
 import { getFeaturesUpToLevel, getMulticlassFeatureGroups } from '../classes/multiclass-manager.js';
 import { getEquippedArmorEntry, getEquippedWeapons, getInventoryWeight } from '../items/inventory-manager.js';
+import { getBackgroundById } from '../backgrounds/background-loader.js';
 
 const ATTRIBUTE_LABELS = [
   ['forca', 'Força'],
@@ -37,6 +38,23 @@ function classSummary(character, classesData) {
 
 function getRaceName(character, racesData) {
   return racesData.find((race) => race.id === character.raca)?.nome || character.raca || '';
+}
+
+function getBackgroundName(character, backgroundsData) {
+  const background = getBackgroundById(backgroundsData, character.antecedente);
+  return background?.nome || character.antecedente || '';
+}
+
+function getBackgroundSummary(character, backgroundsData) {
+  const background = getBackgroundById(backgroundsData, character.antecedente);
+  if (!background) return character.antecedente ? `Antecedente manual: ${character.antecedente}` : 'Nenhum antecedente selecionado.';
+
+  return [
+    `- Perícias: ${(background.pericias || []).join(', ') || '-'}`,
+    `- Idiomas: ${background.idiomas || '-'}`,
+    `- Ferramentas: ${(background.ferramentas || []).join(', ') || '-'}`,
+    `- Ouro inicial: ${background.ouro || '-'}`
+  ].join('\n');
 }
 
 function getPrimaryClassData(character, classesData) {
@@ -126,7 +144,7 @@ function getAttacks(character) {
   }).join('\n');
 }
 
-export function buildCharacterMarkdown({ character, classes = [], races = [] }) {
+export function buildCharacterMarkdown({ character, classes = [], races = [], backgrounds = [] }) {
   const totalLevel = Math.max(1, calcularNivelTotal(character.classes || []));
   const proficiency = calcularBonusProficiencia(totalLevel);
   const armor = getEquippedArmorEntry(character);
@@ -149,7 +167,7 @@ export function buildCharacterMarkdown({ character, classes = [], races = [] }) 
 - Nível: ${totalLevel}
 - Bônus de Proficiência: ${formatarBonus(proficiency)}
 - Raça: ${getRaceName(character, races)}
-- Antecedente: ${line(character.antecedente)}
+- Antecedente: ${getBackgroundName(character, backgrounds)}
 - Tendência: ${line(character.tendencia)}
 - XP: ${character.xp || 0}
 
@@ -170,6 +188,9 @@ ${attributesTable}
 
 ## Proficiências
 ${getProficiencies(character, classes)}
+
+## Antecedente
+${getBackgroundSummary(character, backgrounds)}
 
 ## Perícias
 ${getSkills(character, classes)}

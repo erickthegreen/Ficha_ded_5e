@@ -38,6 +38,7 @@ import {
   searchSpells
 } from '../modules/spells/spell-manager.js';
 import { escapeHtml, joinList } from '../utils/format.js';
+import { getBackgroundById } from '../modules/backgrounds/background-loader.js';
 
 function valueOf(value) {
   return escapeHtml(value ?? '');
@@ -102,6 +103,10 @@ function currentClass(state, classes) {
 
 function currentRace(state, races) {
   return races.find((race) => race.id === state.character.raca) || null;
+}
+
+function currentBackground(state, backgrounds = []) {
+  return getBackgroundById(backgrounds, state.character.antecedente);
 }
 
 function currentSubclass(state, classe) {
@@ -203,6 +208,11 @@ function renderRaceSelect(state, races) {
   return selectField('Raça', 'race', state.character.raca, races, 'Escolha uma raça');
 }
 
+function renderBackgroundSelect(state, backgrounds) {
+  const selected = currentBackground(state, backgrounds);
+  return selectField('Antecedente', 'background', selected?.id || '', backgrounds, 'Escolha um antecedente');
+}
+
 function renderSubclassSelect(state, classe) {
   const primary = getPrimaryClassEntry(state.character);
   const subclasses = classe?.subclasses || [];
@@ -238,12 +248,34 @@ function renderFeatureGroups(groups) {
   `;
 }
 
+function renderBackgroundSummary(background, manualValue = '') {
+  if (!background) {
+    if (manualValue) {
+      return `
+        <p class="muted">Antecedente manual: ${valueOf(manualValue)}.</p>
+        <p class="muted">Escolha um antecedente da lista para carregar perícias, idiomas, ferramentas e ouro.</p>
+      `;
+    }
+    return '<p class="muted">Escolha um antecedente para ver perícias, idiomas, ferramentas e ouro inicial.</p>';
+  }
+
+  return `
+    <dl class="detail-list">
+      <div><dt>Perícias</dt><dd>${valueOf(joinList(background.pericias))}</dd></div>
+      <div><dt>Idiomas</dt><dd>${valueOf(background.idiomas)}</dd></div>
+      <div><dt>Ferramentas</dt><dd>${valueOf(joinList(background.ferramentas))}</dd></div>
+      <div><dt>Ouro inicial</dt><dd>${valueOf(background.ouro || '-')}</dd></div>
+    </dl>
+  `;
+}
+
 function renderPersonagemTab(ctx) {
-  const { state, classes, races } = ctx;
+  const { state, classes, races, backgrounds } = ctx;
   const character = state.character;
   const classe = currentClass(state, classes);
   const primary = getPrimaryClassEntry(character);
   const race = currentRace(state, races);
+  const background = currentBackground(state, backgrounds);
   const levelOneFeatures = classe?.habilidadesPorNivel?.['1'] || [];
   const raceFeatures = race?.habilidades || [];
   const derived = getDerived(ctx);
@@ -258,7 +290,7 @@ function renderPersonagemTab(ctx) {
           ${renderClassSelect(state, classes)}
           ${renderSubclassSelect(state, classe)}
           ${renderRaceSelect(state, races)}
-          ${field('Antecedente', 'antecedente', character.antecedente, { placeholder: 'Ex.: Criminoso, Artesão, Nobre...' })}
+          ${renderBackgroundSelect(state, backgrounds)}
           ${renderPrimaryLevelField(state)}
           ${field('Tendência', 'tendencia', character.tendencia)}
           ${field('XP', 'xp', character.xp, { type: 'number', min: 0 })}
@@ -302,6 +334,11 @@ function renderPersonagemTab(ctx) {
           <h3>Habilidades raciais</h3>
           ${renderFeatureList(raceFeatures)}
         ` : '<p class="muted">Escolha uma raça para ver habilidades raciais e idiomas.</p>'}
+      </div>
+
+      <div class="panel">
+        <h2>Resumo de antecedente</h2>
+        ${renderBackgroundSummary(background, character.antecedente)}
       </div>
     </section>
   `;
@@ -925,10 +962,11 @@ function renderActiveTab(ctx) {
 }
 
 export function renderApp(root, ctx) {
-  const { state, classes, races, errors, toast } = ctx;
+  const { state, classes, races, backgrounds, errors, toast } = ctx;
   const character = state.character;
   const classe = currentClass(state, classes);
   const race = currentRace(state, races);
+  const background = currentBackground(state, backgrounds);
   const derived = getDerived(ctx);
 
   root.className = 'app-shell';
@@ -937,7 +975,7 @@ export function renderApp(root, ctx) {
       <div class="title-block">
         <p class="eyebrow">D&D 5e · Ficha Modular</p>
         <input class="character-title" data-field="nome" value="${valueOf(character.nome)}" placeholder="Nome do personagem">
-        <p>${valueOf(classe?.nome || 'Classe não selecionada')} · ${valueOf(race?.nome || 'Raça não selecionada')} · Nível ${valueOf(derived.nivelTotal)} · PB ${formatarBonus(derived.bonusProficiencia)}</p>
+        <p>${valueOf(classe?.nome || 'Classe não selecionada')} · ${valueOf(race?.nome || 'Raça não selecionada')} · ${valueOf(background?.nome || character.antecedente || 'Antecedente não selecionado')} · Nível ${valueOf(derived.nivelTotal)} · PB ${formatarBonus(derived.bonusProficiencia)}</p>
       </div>
     </header>
 
