@@ -198,8 +198,9 @@ function updateField(name, value) {
     const primaryIndex = state.character.classes.findIndex((entry) => entry.principal);
     if (primaryIndex >= 0) {
       updateClassLevel(state.character, primaryIndex, value);
+      scheduleAutosave();
     }
-    return false;
+    return true;
   }
 
   if (name === 'xp') {

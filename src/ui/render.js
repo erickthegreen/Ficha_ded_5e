@@ -189,6 +189,16 @@ function renderClassSelect(state, classes) {
   return selectField('Classe principal', 'class', primary?.id || '', classes, 'Escolha uma classe');
 }
 
+function renderPrimaryLevelField(state, label = 'Nível da classe principal') {
+  const primary = getPrimaryClassEntry(state.character);
+  return `
+    <label class="form-field">
+      <span>${valueOf(label)}</span>
+      <input data-field="nivelClassePrincipal" type="number" min="1" max="20" value="${valueOf(primary?.nivel || 1)}" ${primary ? '' : 'disabled'}>
+    </label>
+  `;
+}
+
 function renderRaceSelect(state, races) {
   return selectField('Raça', 'race', state.character.raca, races, 'Escolha uma raça');
 }
@@ -249,7 +259,7 @@ function renderPersonagemTab(ctx) {
           ${renderSubclassSelect(state, classe)}
           ${renderRaceSelect(state, races)}
           ${field('Antecedente', 'antecedente', character.antecedente, { placeholder: 'Ex.: Criminoso, Artesão, Nobre...' })}
-          ${field('Nível da classe principal', 'nivelClassePrincipal', primary?.nivel || 1, { type: 'number', min: 1, max: 20 })}
+          ${renderPrimaryLevelField(state)}
           ${field('Tendência', 'tendencia', character.tendencia)}
           ${field('XP', 'xp', character.xp, { type: 'number', min: 0 })}
           ${field('Campanha', 'campanha', character.campanha)}
@@ -340,6 +350,7 @@ function renderClasseTab(ctx) {
     <section class="class-layout">
       <div class="panel">
         <h2>${valueOf(classe.nome)} nível ${valueOf(primary?.nivel || 1)}</h2>
+        ${renderPrimaryLevelField(ctx.state, 'Alterar nível')}
         <div class="summary-stack">
           <div><span>Dado de vida</span><strong>${valueOf(classe.dadoVida)}</strong></div>
           <div><span>PV no nível 1</span><strong>${valueOf(classe.pontosVida?.nivel1)}</strong></div>
@@ -935,6 +946,7 @@ export function renderApp(root, ctx) {
     <section class="quick-panel">
       ${renderClassSelect(state, classes)}
       ${renderRaceSelect(state, races)}
+      ${renderPrimaryLevelField(state, 'Nível da classe')}
       <div class="stat-chip"><span>Nível total</span><strong>${valueOf(derived.nivelTotal)}</strong></div>
       <div class="stat-chip"><span>Proficiência</span><strong>${formatarBonus(derived.bonusProficiencia)}</strong></div>
       <div class="stat-chip"><span>PV</span><strong>${valueOf(derived.pvMaximo)}</strong></div>
