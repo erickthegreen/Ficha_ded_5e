@@ -1,6 +1,7 @@
 import { slugify } from '../../utils/slug.js';
 
 const RACES_URL = new URL('../../../data/racas.json', import.meta.url);
+RACES_URL.searchParams.set('v', '20260526-racas');
 
 function asArray(data, key) {
   if (Array.isArray(data)) return data;
